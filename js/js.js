@@ -54,11 +54,13 @@ $(function () {
         })
 
         laptop
+            // show layout
             .fromTo(
                 section.querySelector(".picbox__picbox__picture-layout"),
                 { opacity: 0 },
                 { opacity: 1 },
             )
+            // show text
             .fromTo(
                 section.querySelector(".picbox__picture-text"),
                 {
@@ -70,6 +72,7 @@ $(function () {
                     y: 0
                 }
             )
+            // hide layout + text
             .fromTo(
                 section.querySelector(".picbox__picbox__picture-layout"),
                 { opacity: 1 },
@@ -78,12 +81,14 @@ $(function () {
                     duration: 1.5
                 }
             )
+            // show laptop behind scene
             .fromTo(
                 section.querySelector(".picbox__picture-notebook img"),
                 { opacity: 0 },
                 { opacity: 1 },
                 1
             )
+            // scale main picture
             .fromTo(
                 section.querySelector(".picbox__picture-pic"),
                 { scale: 1 },
@@ -96,13 +101,14 @@ $(function () {
                 { borderRadius: 3 },
                 2
             )
+            // scale notebook with picture
             .fromTo(
-                section.querySelector(".picbox__picture-notebook img"),
+                section.querySelector(".picbox__picture-notebook"),
                 { scale: 1 },
                 { scale: 0.5 },
                 2
             )
-
+            // replace picture on laptop
             .fromTo(
                 section.querySelector(".picbox__picture-pic .picbox__picture-pic-first"),
                 {
@@ -127,6 +133,31 @@ $(function () {
                     opacity: 1
                 },
                 3
+            )
+            // scale down laptop
+            .fromTo(
+                section.querySelector(".picbox__picture-notebook"),
+                { 
+                    y: 0,
+                    scale: 0.5 
+                },
+                { 
+                    y: 200,
+                    scale: 0.2
+                },
+                4
+            )
+            .fromTo(
+                section.querySelector(".picbox__picture-pic"),
+                { 
+                    y: 0,
+                    scale: 0.5 
+                },
+                { 
+                    y: 200,
+                    scale: 0.2
+                },
+                4
             )
 
     });
