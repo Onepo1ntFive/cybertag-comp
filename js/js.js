@@ -2,8 +2,8 @@ $(function () {
 
     gsap.registerPlugin(ScrollTrigger);
 
+    // rotrate block
     gsap.utils.toArray("body").forEach(section => {
-        //
         let rotate = gsap.timeline({
             scrollTrigger: {
                 trigger: ".b-spin",
@@ -39,8 +39,10 @@ $(function () {
                 { backgroundColor: "#387a5f" },
                 "-=1"
             );
+    });
 
-        //
+    // software to laptop
+    gsap.utils.toArray("body").forEach(section => {
         let laptop = gsap.timeline({
             scrollTrigger: {
                 trigger: ".b-picbox",
@@ -49,7 +51,7 @@ $(function () {
                 scrub: 0.5,
                 id: "scale",
                 pin: true,
-                markers: true,
+                // markers: true,
             }
         })
 
@@ -78,7 +80,7 @@ $(function () {
                 { opacity: 1 },
                 {
                     opacity: 0,
-                    duration: 1.5
+                    duration: 1.6
                 }
             )
             // show laptop behind scene
@@ -137,11 +139,11 @@ $(function () {
             // scale down laptop
             .fromTo(
                 section.querySelector(".picbox__picture-notebook"),
-                { 
+                {
                     y: 0,
-                    scale: 0.5 
+                    scale: 0.5
                 },
-                { 
+                {
                     y: '19%',
                     scale: 0.3
                 },
@@ -149,11 +151,11 @@ $(function () {
             )
             .fromTo(
                 section.querySelector(".picbox__picture-pic"),
-                { 
+                {
                     y: 0,
-                    scale: 0.5 
+                    scale: 0.5
                 },
-                { 
+                {
                     y: '22%',
                     scale: 0.3
                 },
@@ -167,13 +169,13 @@ $(function () {
                     opacity: 0,
                     scale: 0.4
                 },
-                { 
+                {
                     y: '-6%',
                     opacity: 1,
                     scale: 0.7
                 },
                 4
-            )
-
+            );
+        //
     });
 });
