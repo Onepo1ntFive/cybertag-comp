@@ -142,8 +142,8 @@ $(function () {
                     scale: 0.5 
                 },
                 { 
-                    y: 200,
-                    scale: 0.2
+                    y: '19%',
+                    scale: 0.3
                 },
                 4
             )
@@ -154,8 +154,23 @@ $(function () {
                     scale: 0.5 
                 },
                 { 
-                    y: 200,
-                    scale: 0.2
+                    y: '22%',
+                    scale: 0.3
+                },
+                4
+            )
+            //show tv
+            .fromTo(
+                section.querySelector(".picbox__picture-tv"),
+                {
+                    y: '-10%',
+                    opacity: 0,
+                    scale: 0.4
+                },
+                { 
+                    y: '-6%',
+                    opacity: 1,
+                    scale: 0.7
                 },
                 4
             )
